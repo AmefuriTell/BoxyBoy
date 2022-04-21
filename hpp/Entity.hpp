@@ -7,11 +7,15 @@ class Entity
 {
 public:
     Entity();
+    Entity(int, int);
+    void stageInit(int, int);
     void input();
+    void print();
 
     int boxNum;
-    std::vector<std::pair<int, int>> box;
+    int sizeX, sizeY;
     std::pair<int, int> player;
+    std::vector<std::vector<int>> stageStatus;
 };
 
 #endif
